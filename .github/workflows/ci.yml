@@ -39,12 +39,12 @@ jobs:
         run: npm run lint
 
       - name: Compiler Angular pour GitHub Pages
-        run: npm run build -- --base-href /ci-cd-angular/
+        run: npm run build -- --base-href /ci-cd-angular-staging/
 
       - name: Envoyer les fichiers de publication
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist/ci-cd-angular/browser
+          path: dist/ci-cd-angular-staging/browser
 
   deploy-production:
     name: Deployer en production
